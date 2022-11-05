@@ -6,6 +6,7 @@ minikube version
 To view all running kubernetes pod components:  kubectl get pods -n kube-system 
 To View Nodes : kubectl get nodes
 To view a Node's status and other details: kubectl describe node
+kubectl exec -it <<pod name>> -- bash : To go inside your pod
 kubectl create deployment test-nginx --image=nginx:1.18-alpine
 kubectl get deployment
 kubectl get all 
