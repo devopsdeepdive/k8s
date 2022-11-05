@@ -1,1 +1,12 @@
-kubectl run nginx --image=nginx --dry-run=client -o yaml : To do the dry run for run command  
+kubectl run nginx --image=nginx --dry-run=client -o yaml : To do the dry run for run command 
+
+To Create Cluster Ip :
+kubectl expose deployment nginx --name my-cip-service \
+    --type ClusterIP --protocol TCP --port 80
+To Create NodePort:
+kubectl expose deployment nginx --name my-np-service \
+    --type NodePort --protocol TCP --port 80
+To Create LoadBalancer:
+kubectl expose deployment nginx --name my-lb-service \
+    --type LoadBalancer --port 80
+
