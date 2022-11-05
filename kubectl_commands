@@ -10,6 +10,7 @@ kubectl create deployment test-nginx --image=nginx:1.18-alpine
 kubectl get deployment
 kubectl get all 
 kubectl describe rs test-nginx-99cf49b4f
+kubectl logs <<pod name>> :To view the logs
 kubectl describe deployment test-nginx
 kubectl scale deploy test-nginx --replicas=3
 kubectl describe deployment test-nginx
