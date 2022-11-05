@@ -1,4 +1,5 @@
 kubectl run nginx --image=nginx --dry-run=client -o yaml : To do the dry run for run command 
+kubectl create deployment nginx --image=nginx
 
 To Create Cluster Ip :
 kubectl expose deployment nginx --name my-cip-service \
@@ -10,3 +11,7 @@ To Create LoadBalancer:
 kubectl expose deployment nginx --name my-lb-service \
     --type LoadBalancer --port 80
 
+To list Services:
+kubectl get services
+Delete Service;
+kubectl delete <<service name>>
