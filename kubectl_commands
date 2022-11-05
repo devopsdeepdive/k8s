@@ -7,21 +7,21 @@ To view all running kubernetes pod components:  kubectl get pods -n kube-system
 To View Nodes : kubectl get nodes
 To view a Node's status and other details: kubectl describe node
 kubectl exec -it <<pod name>> -- bash : To go inside your pod
-kubectl create deployment test-nginx --image=nginx:1.18-alpine
+kubectl create deployment snginx --image=nginx:1.18-alpine
 kubectl get deployment
 kubectl get all 
-kubectl describe rs test-nginx-99cf49b4f
+kubectl describe rs nginx-99cf49b4f
 kubectl logs <<pod name>> :To view the logs
-kubectl describe deployment test-nginx
-kubectl scale deploy test-nginx --replicas=3
-kubectl describe deployment test-nginx
-kubectl set image deploy test-nginx nginx=nginx:1.19-alpine
-kubectl rollout history deploy test-nginx
-kubectl rollout history deploy test-nginx --revision=1
-kubectl rollout history deploy test-nginx --revision=2
-kubectl rollout history deploy test-nginx --to-revision=1
-kubectl rollout undo deploy test-nginx --to-revision=1
-kubectl delete deploy test-nginx
+kubectl describe deployment nginx
+kubectl scale deploy nginx --replicas=3
+kubectl describe deployment nginx
+kubectl set image deploy nginx nginx=nginx:1.19-alpine
+kubectl rollout history deploy nginx
+kubectl rollout history deploy nginx --revision=1
+kubectl rollout history deploy nginx --revision=2
+kubectl rollout history deploy nginx --to-revision=1
+kubectl rollout undo deploy nginx --to-revision=1
+kubectl delete deploy nginx
 
 Ubuntu cluster :
 ----------------
