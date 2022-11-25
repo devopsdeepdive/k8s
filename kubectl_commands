@@ -23,6 +23,7 @@ kubectl rollout history deploy nginx --revision=2
 kubectl rollout history deploy nginx --to-revision=1
 kubectl rollout undo deploy nginx --to-revision=1
 kubectl delete deploy nginx
+kubectl api-versions
 
 Ubuntu cluster :
 ----------------
