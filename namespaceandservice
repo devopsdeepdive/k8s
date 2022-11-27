@@ -38,3 +38,5 @@ Delete Service;
 kubectl delete service/test-nginx
 To describe:
 kubectl describe service <<servicename>>
+To delete
+kubectl delete service <service-name>
