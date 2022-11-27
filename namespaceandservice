@@ -1,0 +1,40 @@
+PODS
+To get nodes list:
+kubectl get nodes
+To view a Node's status and other details: 
+kubectl describe node
+To get pods list:
+kubectl get pods
+To list all the system pods:
+kubectl get pods -n kube-system
+To get more information about pods:
+kubectl get pods -o wide -n kube-system
+To list all the objects in cluster:
+kubectl get all
+To check all pod logs:
+kubectl get events
+
+NAMESPACES:
+To list down the namespaces
+kubectl get namespace or kubectl get ns
+To create the namespaces:
+kubectl create namespace <<namespace name>>
+To Describe namespace:
+kubectl describe ns <<namespace name>>
+kubectl get namespaces --show-labels
+Create pod in namespace:
+kubectl run <<pod name>> --image=nginx -n <<namespace>>
+To check all pod logs:
+kubectl get events
+To set your default namespace:
+kubectl config set-context --current --namespace=<<namespace name>>
+To delete namespace:
+kubectl delete namespace <<namespace name>>
+
+SERVICES:
+To list Services:
+kubectl get services
+Delete Service;
+kubectl delete service/test-nginx
+To describe:
+kubectl describe service <<servicename>>
